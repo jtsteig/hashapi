@@ -11,23 +11,21 @@ import (
 	"time"
 
 	"github.com/gorilla/mux"
-	"github.com/jtsteig/hashandstatsservice"
-	"github.com/jtsteig/hashmodels"
 )
 
-var hashRepo *hashmodels.HashRepository
-var service hashandstatsservice.HashStatsService
+var hashRepo *HashRepository
+var service HashStatsService
 var shutdownServiceSignal chan bool
 
 func init() {
 	filename := "c:\\temp\\testdb.db"
 	hashTable := "hashes"
 	db, _ := sql.Open("sqlite3", filename)
-	hashRepo, initErr := hashmodels.NewHashStore(db, hashTable)
+	hashRepo, initErr := NewHashRepository(db, hashTable)
 	if initErr != nil {
 		log.Fatal(fmt.Sprintf("Error initing the hash repsitory: %q", initErr))
 	}
-	service = hashandstatsservice.HashStatsService{HashRepository: hashRepo}
+	service = HashStatsService{HashRepository: hashRepo}
 	shutdownServiceSignal = make(chan bool, 0)
 }
 
