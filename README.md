@@ -4,5 +4,10 @@ A quick go API that stores hashes and returns stats on individual and total stas
 
 # Installation
 git clone https://github.com/jtsteig/hashapi.git
+
 go get
+
 go run hashapi.go
+
+# Additions
+Use the included postman package for sample usage.
