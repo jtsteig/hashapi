@@ -1,0 +1,10 @@
+github.com/gorilla/mux v1.7.3 h1:gnP5JzjVOuiZD07fKKToCAOjS0yOpj/qPETTXCCS6hw=
+github.com/gorilla/mux v1.7.3/go.mod h1:1lud6UwP+6orDFRuTfBEV8e9/aOM/c4fVVCaMa2zaAs=
+github.com/jtsteig/encodedhash v0.0.0-20191218003743-0694a0aac504 h1:9rTAfA5W8rTT7P+tlpT2FX/Zj6kbDCI8c+VamdH4jUQ=
+github.com/jtsteig/encodedhash v0.0.0-20191218003743-0694a0aac504/go.mod h1:2k+MryAyw7xm9VhZ/Y1Dl+h/Cnr6Lmc4dLYcTMWRkV0=
+github.com/jtsteig/hashandstatsservice v0.0.0-20191218043331-58a14322c1ae h1:aVzTtsZ1p1NwYx4t8QPMfA8tBCVRTqcZyz3j6dtcI9M=
+github.com/jtsteig/hashandstatsservice v0.0.0-20191218043331-58a14322c1ae/go.mod h1:N2qzVAFFXz0SOAoU23DcbQyahJO9jcnazDTwel86g1I=
+github.com/jtsteig/hashmodels v0.0.0-20191218041734-d799955d3f5f h1:RsQxiPDdDwQT9piAIvE3V937NVs4goo/iYc9IIZhJSs=
+github.com/jtsteig/hashmodels v0.0.0-20191218041734-d799955d3f5f/go.mod h1:D1tJprwwYrKE9vx+7pD4s2M6nDRmpukeVeRoabE/N0E=
+github.com/mattn/go-sqlite3 v2.0.2+incompatible h1:qzw9c2GNT8UFrgWNDhCTqRqYUSmu/Dav/9Z58LGpk7U=
+github.com/mattn/go-sqlite3 v2.0.2+incompatible/go.mod h1:FPy6KqzDD04eiIsT53CuJW3U88zkxoIYsOqkbpncsNc=
