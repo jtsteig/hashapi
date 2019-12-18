@@ -34,7 +34,7 @@ func main() {
 	// Setting up the exit for shutdown.
 	router := mux.NewRouter().StrictSlash(true)
 	router.Path("/hash").HandlerFunc(createHash).Methods("POST")
-	router.Path("/hash/{id:[0-9]+}").HandlerFunc(createHash)
+	router.Path("/hash/{id:[0-9]+}").HandlerFunc(getHash).Methods("GET")
 	router.Path("/shutdown").HandlerFunc(shutdownService)
 
 	server := &http.Server{
