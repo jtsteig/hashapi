@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"database/sql"
+	"encoding/json"
 	"fmt"
 	"log"
 	"net/http"
@@ -36,6 +37,7 @@ func main() {
 	router.Path("/hash").HandlerFunc(createHash).Methods("POST")
 	router.Path("/hash/{id:[0-9]+}").HandlerFunc(getHash).Methods("GET")
 	router.Path("/shutdown").HandlerFunc(shutdownService)
+	router.Path("/stats").HandlerFunc(getTotalStats).Methods("GET")
 
 	server := &http.Server{
 		Addr:    ":8080",
@@ -61,6 +63,16 @@ func main() {
 		log.Fatalf("Failed to stop server gracefully: %q", err)
 	}
 	log.Printf("Server shut down.")
+}
+
+func getTotalStats(w http.ResponseWriter, r *http.Request) {
+	stats, err := service.GetTotalStats()
+	if err != nil {
+		w.WriteHeader(http.StatusInternalServerError)
+		return
+	}
+	w.Header().Set("Content-Type", "application/json")
+	json.NewEncoder(w).Encode(stats)
 }
 
 func shutdownService(w http.ResponseWriter, r *http.Request) {
